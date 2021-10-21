@@ -2,20 +2,34 @@
     box-sizing: border-box;
     margin: 0;
 }
+:root {
+    --morange:rgb(254, 114, 35); 
+  
+}
 .orangeclr {
-    color:rgb(254, 114, 35) !important;
+    color:var(--morange) !important;
 }
 .borangeclr {
-    background-color:rgb(254, 114, 35) !important ;
+    background-color:var(--morange) !important ;
 }
 .upcontainer {
-    background-color: rgb(254, 114, 35) !important;
+    background-color: var(--morange) !important;
 }
 .lang-div {
     min-width: 4rem !important;
+    top: 110% !important;
+    right: 5px !important;
 }
 .lang-item {
     cursor: pointer;
+    padding: 5px 5px;
+}
+.head-drop {
+    top: 110%!important;
+
+}
+.dollar-drop {
+    min-width: 18px !important;
 }
 .li-bef::before {
     content: "";
@@ -33,7 +47,7 @@
 }
 .light-icon {
     font-size: 33px;
-    color: rgb(254, 114, 35)  ;
+    color: var(--morange)  ;
 }
 .on-shop-text {
     font-weight: 700;
@@ -72,9 +86,10 @@
     height: 20px;
 }
 .sign-btn {
-    background-color: rgb(254, 114, 35) !important ;
+    background-color: var(--morange) !important ;
     padding: 10px 8px !important;
     color: white !important;
+    cursor: pointer;
 }
 .main-search {
     font-size: 20px;
@@ -94,13 +109,175 @@
 }
 
 
+       /* Sign form css  */
+
+
+
+
+.sign-up-main {
+    background-color: white;
+    width: 400px;
+    max-width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    z-index: 999;
+}
+.sign-x-icon {
+    display: block;
+    text-align: end;
+    margin: 6px 12px 0px 0px;
+    font-size: 19px;
+    cursor: pointer;
+    color: #171010ad;
+}
+.sign-up-inn {
+    width: 50%;
+    margin: auto;
+}
+.sign-up-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.sign-up-div div {
+    padding: 10px;
+    border: 2px solid white;
+    transition: all .5s;
+}
+.sign-up-div div a {
+    text-decoration: none;
+    color: rgb(28 105 128 / 68%);
+    font-size: 19px;
+    font-weight: 700;
+}
+.fb-clrr {
+    color: rgb(35 153 254) !important;
+}
+.gg-clrr {
+    color: rgb(208 38 101) !important;
+}
+.sign-up-div div:hover {
+    border-bottom: 2px solid gray; 
+    cursor: pointer;
+}
+.fb-gg-icons {
+    width: 70px;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.fb-inn-icons {
+    width: 35px;
+    height: 35px;
+    color: var(--morange);
+    border: 2px solid rgba(128, 128, 128, 0.301);
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    cursor: pointer;
+}
+.sign-up-inn h5 {
+    text-align: center;
+    opacity: 0.5;
+    margin: 10px 0px 5px 0px;
+    font-size: 16px;
+}
+.sign-main-form div  {
+    text-align: right;
+    margin-top: 10px;
+}
+.forget-pass a {
+    color: gray;
+}
+.form-inn-inp {
+    width: 100%;
+    padding: 10px 0px 10px 30px;
+    border-radius: 5px;
+    border: 2px solid gray;
+}
+.form-inn-lab {
+    position: relative;
+    top: 36px;
+    left: 10px;
+    color: var(--morange);
+}
+.inputt {
+    padding: 10px;
+    background-color: var(--morange);
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+}
+.sign-up-inn p {
+    font-size: 12px;
+    text-align: center;
+    opacity: 0.7;
+    padding: 10px 0px 20px 0px;
+}
+.sign-up-inn p span {
+    color:var(--morange) ;
+    font-weight: 600;
+    opacity:unset;
+    cursor: pointer;
+    padding-left: 5px;
+    font-size: 16px;
+}
+.fade-main-form {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    transition: all .3s;
+    display: none;
+}
+.sign-cont-effects {
+    background-color: #000000d9;
+    z-index: 99;
+    top: 0;
+    height: 100vh;
+}
+.pos-form-2 {
+    left: 100%;
+}
+.sign-form-main {
+    width: 100%;
+    height: 230px;  
+    overflow: hidden; 
+}
+.rep-pass-inp  {
+    margin-top: -10px;
+}
+.form-labb-2 {
+    top: 26px;
+}
+@media (max-width:400px) {
+    .sign-up-inn {
+        width: 75%;
+    }
+    .sign-up-div {
+        justify-content: space-around;
+    }
+}
+
+
+
+
 .bskt-icon {
     font-size: 20px;
 }
 .bskt-item {
     width: 18px;
     height: 18px;
-    background-color: rgb(254, 114, 35);
+    background-color: var(--morange);
     border-radius: 50%;
     display: inline-block;
     position: absolute;
@@ -136,59 +313,64 @@ font-family: sans-serif;
 }
 
 .swipe-img1 {
-    background-image: url(https://www.macobserver.com/wp-content/uploads/2020/06/White-airpods-white-background.jpg);
-    width: 100%;
-    height: 380px;
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-    box-shadow: 3px 2px 6px 1px #46464657;
+    background-image:linear-gradient(to bottom, #808080f5, #ffffff94),  
+    url(https://www.macobserver.com/wp-content/uploads/2020/06/White-airpods-white-background.jpg);
 }
 .swipe-img2 {
-    background-image: url(https://blog.media.io/images/phone/iphone/apple-earpods-airpods-wireless.jpg);
-    width: 100%;
-    height: 380px;
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-    box-shadow: 3px 2px 6px 1px #46464657;
+    background-image: linear-gradient(to bottom, #808080f5, #ffffff94), 
+    url(https://blog.media.io/images/phone/iphone/apple-earpods-airpods-wireless.jpg);
 }
 .swipe-img3 {
-    background-image: url(https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?cs=srgb&dl=pexels-j%C3%A9shoots-238118.jpg&fm=jpg);
-    width: 100%;
-    height: 380px;
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-    box-shadow: 3px 2px 6px 1px #46464657;
+    background-image:linear-gradient(to bottom, #808080f5, #ffffff94),  
+    url(https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?cs=srgb&dl=pexels-j%C3%A9shoots-238118.jpg&fm=jpg);
+    
 }
 .swipe-img4 {
-    background-image: url(https://www.xda-developers.com/files/2021/08/Xiaomi-Mi-MIX-4-front-and-back-on-gray-background.jpg);
-    width: 100%;
-    height: 380px;
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-    box-shadow: 3px 2px 6px 1px #46464657;
+    background-image:linear-gradient(to bottom, #808080f5, #ffffff94),  
+    url(https://www.xda-developers.com/files/2021/08/Xiaomi-Mi-MIX-4-front-and-back-on-gray-background.jpg);
+    
 }
 .swipe-img5 {
-    background-image: url(https://png.pngtree.com/thumb_back/fh260/back_our/20190625/ourmid/pngtree-simple-desk-computer-background-image_259562.jpg);
-    width: 100%;
-    height: 380px;
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-    box-shadow: 3px 2px 6px 1px #46464657;
+    background-image:linear-gradient(to bottom, #808080f5, #ffffff94),  
+    url(https://png.pngtree.com/thumb_back/fh260/back_our/20190625/ourmid/pngtree-simple-desk-computer-background-image_259562.jpg);
+    
 }
 .swipe-img6 {
-    background-image: url(https://www.insidehook.com/wp-content/uploads/2021/03/airpods.jpg?fit=1200%2C800);
+    background-image:linear-gradient(to bottom, #808080f5, #ffffff94), 
+     url(https://www.insidehook.com/wp-content/uploads/2021/03/airpods.jpg?fit=1200%2C800);
+   
+}
+.swipe-images {
     width: 100%;
     height: 380px;
     background-position: center;
     background-size: cover;
     border-radius: 30px;
     box-shadow: 3px 2px 6px 1px #46464657;
+
 }
+
+@media (min-width:991px) {
+    .main-swiper .swiper-slide {
+        transition:all .3s;
+    } 
+    .main-swiper .swiper-slide-next {
+        margin: 0px 130px;
+        right: 127px !important;
+        transform: scale(1.8 , 1.2);
+    }
+    .main-swiper .swiper-slide-active {
+        right: 255px !important;
+    }
+    .swipe-images h1 {
+        font-size: 23px;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.514);
+        padding: 20px 0px;
+        font-family: none;
+    }
+}
+
 
 .sw-pagination1 {
     position:relative !important;
@@ -196,14 +378,14 @@ font-family: sans-serif;
     padding: 15px;
 }
 .swiper-pagination-bullet-active {
-    background-color:rgb(254, 114, 35) ;
+    background-color:var(--morange) ;
     width: 17px;
     height: 8px;
     border-radius: 5px;
     transition: all .6s;
 }
 .techinfo-price {
-    color: rgb(254, 114, 35);
+    color: var(--morange);
     font-size: 25px;
     font-weight: 600;
 }
@@ -216,11 +398,11 @@ font-family: sans-serif;
 }
 .bdeal-icon {
     font-size: 15px;
-    color:rgb(254, 114, 35) ;
+    color:var(--morange) ;
     padding-right: 3px;
 }
 .bdeal-price {
-    color: rgb(254, 114, 35);
+    color: var(--morange);
     font-weight: 700;
     margin: 0;
     padding-top: 30px;
@@ -267,7 +449,7 @@ font-family: sans-serif;
     width: 50px;
     max-width: 100%;
     height: 50px;
-    background-color: rgb(254, 114, 35);
+    background-color: var(--morange);
     border-radius: 50%;
     z-index: 999;
     position: absolute;
@@ -282,7 +464,7 @@ font-family: sans-serif;
 }
 .hot-cart-btns {
     border: 2px solid rgb(254 114 35 / 42%);
-    color: rgb(254, 114, 35);
+    color: var(--morange);
     border-radius: 9px;
     padding: 10px 0px;
     
@@ -290,11 +472,11 @@ font-family: sans-serif;
 }
 .hot-cart-btns:hover {
     background-color: rgb(254 114 35 / 42%) ;
-    border: 2px solid rgb(254, 114, 35);
+    border: 2px solid var(--morange);
 }
 
 .top-price {
-    color: rgb(254, 114, 35) ;
+    color: var(--morange) ;
     font-weight: 600;
 }
 .top-nonprice {
@@ -306,7 +488,7 @@ font-family: sans-serif;
 }
 .bdeal-icon1 {
     font-size: 15px;
-    color:rgb(254, 114, 35) ;
+    color:var(--morange) ;
     padding: 1px; 
 }
 .pop-srch-btn {
@@ -324,7 +506,7 @@ font-family: sans-serif;
     content: none;
 }
 .pop-srch-btn:hover {
-    color: rgb(254, 114, 35);
+    color: var(--morange);
 }
 .inn-mini-cards {
     border: 1px solid #dddddd;
@@ -334,10 +516,10 @@ font-family: sans-serif;
     position: relative;
     bottom: 28px;
     font-size: 35px;
-    color: rgb(254, 114, 35);
+    color: var(--morange);
 }
 .flash-cont {
-    background-color: rgb(254, 114, 35) ;
+    background-color: var(--morange) ;
     background-image: url(https://www.proimprint.com/blog/wp-content/uploads/2020/06/116.png);
     background-position: center;
     background-size: cover;
@@ -359,7 +541,7 @@ font-family: sans-serif;
 .orng-inline {
     width: 80%;
     height: 10px;
-    background-color: rgb(254, 114, 35);
+    background-color: var(--morange);
     border-radius: 12px;
 }
 .swiper-pagination2 span {
@@ -390,7 +572,7 @@ font-family: sans-serif;
 .wink-icon {
     font-size: 27px;
     padding-right: 10px;
-    color: rgb(254, 114, 35);
+    color: var(--morange);
 }
 .logo-icon-btns {
     position: absolute;
@@ -425,7 +607,7 @@ font-family: sans-serif;
     font-weight: 700;
 }
 .newsletter {
-    background-color: rgb(254, 114, 35);
+    background-color: var(--morange);
 }
 .letter-icon {
     font-size: 80px !important;
@@ -450,7 +632,7 @@ font-family: sans-serif;
     color: gray;
 }
 .contact-nump {
-    color:rgb(254, 114, 35) ;
+    color:var(--morange) ;
     font-weight: 700;
 }
 .appl-btn {
@@ -478,10 +660,17 @@ font-family: sans-serif;
 
 @media  (max-width: 400px)  {
     .swipe-images {
-        height: 300px;
+        height: 250px;
     }
     .swipe-images h1 {
-        font-size: 18px;
+        font-size: 15px !important;
+        padding: 5px 0px !important;
+    }
+    .tech-info {
+        padding: 25px 20px !important;
+    }
+    .tech-info button {
+        margin-top: 0px !important;
     }
 }
 
@@ -491,13 +680,14 @@ font-family: sans-serif;
         top: 10px;
         z-index: 999;
     }
+
 }
 
 
 
 @media  (max-width: 991px) {
     .dropdown-menu {
-        background-color: rgb(254, 114, 35) ;
+        background-color: var(--morange) ;
         border: none;
     }
     .dropdown-item {
@@ -507,7 +697,7 @@ font-family: sans-serif;
         padding: 10px 0px !important;
     }
     .mySwiper2 .swiper-slide {
-        padding: 0px 5px 0px 0px!important;
+        padding: 5px 5px 5px 3px!important;
     }
   
 
@@ -579,15 +769,36 @@ font-family: sans-serif;
     overflow: overlay;
     height: 390px;
 }
+.hot-span {
+    color: rgb(196 107 57) !important;
+}
 .btn-check:focus+.btn, .btn:focus {
     box-shadow: none;
     color: orange;
 }
 .tech-info button {
     color: #fff;
-    background-color: #595d60;
-    border-color: #595d60;
+    background-color: #8e7777e8;
+    border-color: #1a1e21;
+    border: none;
+    transition: all .3s;
+    margin-top: 40px;
+    
 }
+.tech-info button:hover {
+    color: #fff;
+    background-color: #765c5c;
+    border-color: #1a1e21; 
+    transform: scale(1.03);
+}
+.tech-info button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    color: white !important;
+    border: none;
+    background-color: #765c5c;
+}
+
 .navbar-shadow {
     box-shadow: 0px 20px 14px -7px #80808054;
 }
@@ -599,7 +810,7 @@ font-family: sans-serif;
 }
 .form-check-input:checked {
 
-    background-color: rgb(254, 114, 35) !important ;
+    background-color: var(--morange) !important ;
     border: none !important;
 }
 .listgrid-icon {
@@ -616,8 +827,8 @@ font-family: sans-serif;
     transition: all .3s;
 }
 .hrt-btn:hover {
-    border: 2ox solid rgb(254, 114, 35) !important;
-    background-color: rgb(254, 114, 35);
+    border: 2ox solid var(--morange) !important;
+    background-color: var(--morange);
     color: white !important;
 }
 .bskt-btn-ctg:hover {
@@ -639,14 +850,14 @@ font-family: sans-serif;
 .irs--flat .irs-bar {
     top: 25px;
     height: 6px;
-    background-color: rgb(254, 114, 35) !important;
+    background-color: var(--morange) !important;
 }
 .irs--flat .irs-handle>i:first-child {
     top: -1px;
     width: 15px;
     height: 15px;
     margin-left: -6px;
-    background-color: rgb(254, 114, 35) ;
+    background-color: var(--morange) ;
     border-radius: 50%;
 }
 .irs--flat .irs-line {
@@ -656,10 +867,10 @@ font-family: sans-serif;
     border-radius: 4px;
 }
 .irs-to {
-    background-color:rgb(254, 114, 35) !important ;
+    background-color:var(--morange) !important ;
 }
 .irs-from {
-    background-color:rgb(254, 114, 35) !important ;
+    background-color:var(--morange) !important ;
 }
 .form-check-input:focus {
     border-color: none;
@@ -668,16 +879,16 @@ font-family: sans-serif;
 }
 .clrs-innbtn {
     border: 2px solid rgb(254 114 35 / 16%);
-    color: rgb(254, 114, 35);
+    color: var(--morange);
 }
 .clrs-innbtn:hover {
     color: white;
-    background-color: rgb(254, 114, 35);
+    background-color: var(--morange);
     box-shadow: 0px 0px 1px 1px #9fb43f85;
-    border: 2px solid rgb(254, 114, 35);
+    border: 2px solid var(--morange);
 }
 .sh-more-p {
-    color: rgb(254, 114, 35);
+    color: var(--morange);
     font-weight: 600;
     padding: 15px 0px;
     display:inline-block;
@@ -709,7 +920,7 @@ font-family: sans-serif;
 }
 .filter-btn {
     border-radius: 9px;
-    background-color: rgb(254, 114, 35);
+    background-color: var(--morange);
     padding: 13px;
     color: white;
     font-size: 19px;
@@ -732,6 +943,7 @@ font-family: sans-serif;
     align-items: center;
     font-size: 32px;
     color: #808080f2;
+    margin-left: 7px;
 
 }
 .filter-toggle {
@@ -782,7 +994,7 @@ font-family: sans-serif;
     }
     .clrs-innbtn {
         border: 2px solid rgb(254 114 35 / 16%);
-        color: rgb(254, 114, 35);
+        color: var(--morange);
         padding: 5px 8px !important;
         width: 65px;
         max-width: 100%;
@@ -816,12 +1028,12 @@ font-family: sans-serif;
 }
 .swiper-slide-thumb-active {
 padding: 5px;
-border: 2px solid rgb(254, 114, 35);
+border: 2px solid var(--morange);
 
 }
 
 .hrt-icon:hover {
-    color: rgb(254, 114, 35) !important;
+    color: var(--morange) !important;
     cursor: pointer;
 }
 .cat-price {
@@ -842,7 +1054,7 @@ border: 2px solid rgb(254, 114, 35);
 }
 .inch-btn:hover , .count-buy:hover {
     background-color: #ffa50040;
-    color:rgb(254, 114, 35) ;
+    color:var(--morange) ;
     border: 2px solid #ffa50040;
 }
 .count-inp {
@@ -853,7 +1065,7 @@ border: 2px solid rgb(254, 114, 35);
     padding: 8px 0px;
     border: 2px solid #8080804a;
     border-radius: 8px;
-    color: rgb(254, 114, 35);
+    color: var(--morange);
 }
 .count-dash {
     position: absolute;
@@ -875,7 +1087,7 @@ border: 2px solid rgb(254, 114, 35);
 }
 .count-buy {
     border: 2px solid #ebad3b;
-    color: rgb(254, 114, 35);
+    color: var(--morange);
     padding: 8px 26px;
     border-radius: 9px;
     font-weight:700;
@@ -884,10 +1096,17 @@ border: 2px solid rgb(254, 114, 35);
 .count-cart {
     padding: 8px 45px;
     border-radius: 9px;
-    background-color: rgb(254, 114, 35);
+    background-color: var(--morange);
     color: white;
      font-weight:700 ; 
-     border: 2px solid rgb(254, 114, 35); 
+     border: 2px solid var(--morange); 
+}
+.swipe-images h1 {
+    font-size: 23px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.514);
+    padding: 20px 0px;
+    font-family: none;
 }
 @media (max-width:990px) {
     .head-drop {
@@ -897,7 +1116,160 @@ border: 2px solid rgb(254, 114, 35);
 }
 @media (max-width:330px) {
 
-    
+    .inch-btn1 {
+        margin-top: 5px;
+    }
+}
+
+
+
+/* smartphone page  */
+
+
+.mainrow {
+    width: 70%;
+    border: 2px solid gray;
+}
+.phimg {
+    width: 100%;
+    object-fit: contain;
+    height: 600px;
+}
+.obj {
+    padding-top: 5rem;
+}
+.sale {
+    border: 3px solid var(--morange);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: gray;
+    box-shadow: 3px 3px 3px rgb(254 114 35 / 62%);
+}
+
+.clrrow {
+    width: 50%;
+    --bs-gutter-x: 0 !important;
+}
+.circlediv {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid gray;
+    padding: 15px;
+    cursor: pointer;
+}
+.capdiv {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #80808040;
+    position: relative;
+    cursor: pointer;
+}
+.capdiv p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+}
+.cardiv i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+}
+.cardiv {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s;
+}
+.cardiv:hover {
+    background-color: #80808040;
+
+}
+#numinp {
+    width: 60px;
+    background-color: #dddcdc;
+}
+.tog {
+    transform: scale(0.5);
+    transition: all 0.5s;
+}
+.xx-green{
+    position: absolute;
+    top: -7px;
+    right: 1px;
+    font-size: 29px;
+    color: #116611;
+}
+.disable {
+    pointer-events: none; 
+    display: block;
+}
+.pricebor {
+    border: 3px solid rgb(254 114 35 / 56%);
+}
+.line {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+.count-phone {
+    outline: none;
+    width: 80px;
+    max-width: 100%;
+    text-align: center;
+    padding: 4px 0px;
+    border: 2px solid #8080804a;
+    border-radius: 8px;
+    color: var(--morange);
+}
+.pcount-dash {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #808080ad;
+    transform: translate(-50%, -50%);
+}
+.pcount-plus {
+    position: absolute;
+    bottom: 3px;
+    left: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #808080d4;
+    user-select: none;
+}
+.phone-cart {
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 30px;
+    background-color: var(--morange);
+
+}
+@media (max-width: 768px) {
+    .phimg {
+        height: 400px;
+        
+    }
+    .capacity {
+        justify-content: center;       
+    }
+}
+@media (max-width: 568px) {
+    .clrrow {
+        width: 100%;
+    }
 }
 
 

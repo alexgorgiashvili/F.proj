@@ -30,12 +30,48 @@ $(".main-search").click(function (e) {
     
 });
 
+//  Sign in Form
+$(".change-form-btn1 , .more-sign-click").click(function (e) { 
+  e.preventDefault();
+   $(".pos-form-1").animate({"right" : "100%"},100)
+   $(".pos-form-2").animate({"left" : "0"},100)
+   $(".sign-form-main").animate({"height": "260px"},100)
+   $(".forget-pass").hide()
+   $(".faded-p").hide()
+  
+});
+
+$(".change-form-btn").click(function (e) { 
+  e.preventDefault();
+   $(".pos-form-1").animate({"right" : "0%"},100)
+   $(".pos-form-2").animate({"left" : "100%"},100)
+   $(".sign-form-main").animate({"height": "230px"},100)
+   $(".forget-pass").fadeIn(800)
+   $(".faded-p").fadeIn(800)
+  
+});
+
+
+$(".sign-btn").click(function (e) { 
+  e.preventDefault();
+  $(".fade-main-form").fadeIn(300).addClass("sign-cont-effects")
+  
+});
+$(".sign-x-icon").click(function (e) { 
+  e.preventDefault();
+  $(".fade-main-form").hide().removeClass("sign-cont-effects")
+  
+});
+
+
+
+
+
 //  SWipers
 
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView:3,
-    spaceBetween: 40,
     freeMode: false,
     grabCursor: true,
     breakpoints: {
@@ -49,7 +85,7 @@ var swiper = new Swiper(".mySwiper", {
       },  
       990: {
         slidesPerView: 3,
-        spaceBetween: 50,
+        spaceBetween: 0,
       },
     },
     pagination: {
@@ -193,6 +229,7 @@ var swiper = new Swiper(".mySwiper", {
       0: {
         slidesPerView: 1,
         spaceBetween: 20,
+        slidesPerGroup:1 ,
       }, 
       640: {
         slidesPerView: 2,
@@ -298,4 +335,77 @@ $(".filter-hide").on("click", function() {
     e.preventDefault();
     let counter = $(".count-inp").val(++x)
 
+  });
+
+
+
+  // Smartphone  page 
+
+
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+    
+  });
+
+ 
+  let price = $(".capdiv").attr("data-price")
+  let redphone = $(".circlediv").eq(4).attr("data-img")
+  
+
+  $(".circlediv").on("click", function(){
+    let img = $(this).attr("data-img")
+     
+    
+    
+    $(".phimg").attr("src",img)
+    let mimg = $(".phimg").attr("src") 
+    $(".circlediv").removeClass("pricebor")
+    $(this).addClass("pricebor") 
+    if(price == "$749.00" && redphone == mimg ){
+        
+      $(".pricep").children().eq(0).addClass("line ")
+      $(".hiddenspan").removeClass("d-none")
+      
+  }else{
+    $(".pricep").children().eq(0).removeClass("line ")
+    $(".hiddenspan").addClass("d-none")
+  } 
+  
+  console.log( redphone == mimg )
+
+
+  })
+ 
+
+  $(".capdiv").on("click", function(){
+    let price = $(this).attr("data-price")
+    let mimg = $(".phimg").attr("src")
+    
+    $(".pricep").children().eq(0).text(price)
+    $(".capdiv").removeClass("pricebor")
+    $(this).addClass("pricebor")
+    if(price == "$799.00"){
+        $(".clrdiv:last-child").addClass("disable")
+        $(".xx-green").removeClass("d-none")
+
+    }else{
+        $(".clrdiv:last-child").removeClass("disable")
+        $(".xx-green").addClass("d-none")
+    }
+    if( redphone == mimg && price == "$749.00"){
+        
+        $(".pricep").children().eq(0).addClass("line ")
+        $(".hiddenspan").removeClass("d-none")
+        
+    }else{
+      $(".pricep").children().eq(0).removeClass("line ")
+      $(".hiddenspan").addClass("d-none")
+    }       
+  
+  })
+  $(".cardiv").click(function (e) { 
+    e.preventDefault();
+    $(".cardiv").removeClass("pricebor")
+    $(this).addClass("pricebor")
+    
   });
